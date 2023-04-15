@@ -6,10 +6,30 @@ namespace Wi_e_so
     {
         public DataBase()
         {
-            if (!File.Exists("./Questions.sqlite3"))
+            if (!File.Exists("C:\\Users\\Public\\Wieso\\Questions.sqlite3"))
             {
-                SQLiteConnection.CreateFile("Questions.sqlite3");
+                SQLiteConnection.CreateFile("C:\\Users\\Public\\Wieso\\Questions.sqlite3");
+                try
+                {
+                    using (SQLiteConnection connection = new SQLiteConnection("Data Source = C:\\Users\\Public\\Wieso\\Questions.sqlite3"))
+                    {
+                        connection.Open();
+                        using (SQLiteCommand command = new SQLiteCommand("CREATE TABLE Overview('Catalog' TEXT NOT NULL)", connection))
+                        {
+                            command.ExecuteNonQuery();
+                        }
+                        using (SQLiteCommand command = new SQLiteCommand($"CREATE TABLE Score('Name' TEXT NOT NULL,'Catalog' TEXT NOT NULL, 'Score' INTEGER NOT NULL, 'Date' TEXT NOT NULL)", connection))
+                        {
+                            command.ExecuteNonQuery();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
+                
         }
 
         public int count(string table)
@@ -17,7 +37,7 @@ namespace Wi_e_so
             int entries = 0;
             try
             {
-                using (SQLiteConnection connection = new SQLiteConnection("Data Source = Questions.sqlite3"))
+                using (SQLiteConnection connection = new SQLiteConnection("Data Source = C:\\Users\\Public\\Wieso\\Questions.sqlite3"))
                 {
                     connection.Open();
                     using (SQLiteCommand command = new SQLiteCommand("SELECT * FROM "+table, connection))
@@ -50,7 +70,7 @@ namespace Wi_e_so
             {
                 int index = 0;
 
-                using (SQLiteConnection connection = new SQLiteConnection("Data Source = Questions.sqlite3"))
+                using (SQLiteConnection connection = new SQLiteConnection("Data Source = C:\\Users\\Public\\Wieso\\Questions.sqlite3"))
                 {
                     connection.Open();
                     using (SQLiteCommand command = new SQLiteCommand($"SELECT * FROM "+table , connection))

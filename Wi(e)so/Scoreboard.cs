@@ -16,7 +16,7 @@ namespace Wi_e_so
             {
                 int index = 0;
 
-                using (SQLiteConnection connection = new SQLiteConnection("Data Source = Questions.sqlite3"))
+                using (SQLiteConnection connection = new SQLiteConnection("Data Source = C:\\Users\\Public\\Wieso\\Questions.sqlite3"))
                 {
                     connection.Open();
                     using (SQLiteCommand command = new SQLiteCommand($"SELECT * FROM Score", connection))
@@ -47,7 +47,7 @@ namespace Wi_e_so
 
         private void BTN_DEL_Click(object sender, EventArgs e)
         {
-            using (SQLiteConnection connection = new SQLiteConnection("Data Source = Questions.sqlite3"))
+            using (SQLiteConnection connection = new SQLiteConnection("Data Source = C:\\Users\\Public\\Wieso\\Questions.sqlite3"))
             {
                 connection.Open();
                 using (SQLiteCommand command = new SQLiteCommand($"DROP TABLE Score", connection))

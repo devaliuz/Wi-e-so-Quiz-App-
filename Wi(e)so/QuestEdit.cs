@@ -34,7 +34,7 @@ namespace Wi_e_so
             try
             {
                 string table = TB_TABLENAME.Text.ToString();
-                using (SQLiteConnection connection = new SQLiteConnection("Data Source = Questions.sqlite3"))
+                using (SQLiteConnection connection = new SQLiteConnection("Data Source = C:\\Users\\Public\\Wieso\\Questions.sqlite3"))
                 {
                     connection.Open();
                     using (SQLiteCommand command = new SQLiteCommand($"CREATE TABLE " + table + " " +
