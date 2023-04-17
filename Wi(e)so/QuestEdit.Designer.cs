@@ -29,133 +29,127 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QuestEdit));
-            this.DG_NEW = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TB_TABLENAME = new System.Windows.Forms.TextBox();
-            this.CMB_CAT_TODEL = new System.Windows.Forms.ComboBox();
-            this.BTN_ADD_CAT = new System.Windows.Forms.Button();
-            this.BTN_DEL_TAB = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.DG_NEW)).BeginInit();
-            this.SuspendLayout();
+            DG_NEW = new DataGridView();
+            TB_TABLENAME = new TextBox();
+            CMB_CAT_TODEL = new ComboBox();
+            BTN_ADD_CAT = new Button();
+            BTN_DEL_TAB = new Button();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
+            Column6 = new DataGridViewTextBoxColumn();
+            Column7 = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)DG_NEW).BeginInit();
+            SuspendLayout();
             // 
             // DG_NEW
             // 
-            this.DG_NEW.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DG_NEW.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7});
-            this.DG_NEW.Location = new System.Drawing.Point(12, 12);
-            this.DG_NEW.Name = "DG_NEW";
-            this.DG_NEW.RowTemplate.Height = 25;
-            this.DG_NEW.Size = new System.Drawing.Size(760, 348);
-            this.DG_NEW.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Frage";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Fragetyp";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "RichtigeAntwort";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Antwort_A";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Antwort_B";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Antwort_C";
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Antwort_D";
-            this.Column7.Name = "Column7";
+            DG_NEW.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DG_NEW.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7 });
+            DG_NEW.Location = new Point(12, 12);
+            DG_NEW.Name = "DG_NEW";
+            DG_NEW.RowTemplate.Height = 25;
+            DG_NEW.Size = new Size(760, 348);
+            DG_NEW.TabIndex = 0;
             // 
             // TB_TABLENAME
             // 
-            this.TB_TABLENAME.Location = new System.Drawing.Point(12, 376);
-            this.TB_TABLENAME.Name = "TB_TABLENAME";
-            this.TB_TABLENAME.PlaceholderText = "Name Fragenkatalog";
-            this.TB_TABLENAME.Size = new System.Drawing.Size(181, 23);
-            this.TB_TABLENAME.TabIndex = 1;
+            TB_TABLENAME.Location = new Point(12, 376);
+            TB_TABLENAME.Name = "TB_TABLENAME";
+            TB_TABLENAME.PlaceholderText = "Name Fragenkatalog";
+            TB_TABLENAME.Size = new Size(181, 23);
+            TB_TABLENAME.TabIndex = 1;
             // 
             // CMB_CAT_TODEL
             // 
-            this.CMB_CAT_TODEL.FormattingEnabled = true;
-            this.CMB_CAT_TODEL.Location = new System.Drawing.Point(509, 376);
-            this.CMB_CAT_TODEL.Name = "CMB_CAT_TODEL";
-            this.CMB_CAT_TODEL.Size = new System.Drawing.Size(263, 23);
-            this.CMB_CAT_TODEL.TabIndex = 2;
-            this.CMB_CAT_TODEL.SelectedIndexChanged += new System.EventHandler(this.CMB_CAT_TODEL_SelectedIndexChanged);
+            CMB_CAT_TODEL.FormattingEnabled = true;
+            CMB_CAT_TODEL.Location = new Point(509, 376);
+            CMB_CAT_TODEL.Name = "CMB_CAT_TODEL";
+            CMB_CAT_TODEL.Size = new Size(263, 23);
+            CMB_CAT_TODEL.TabIndex = 2;
+            CMB_CAT_TODEL.SelectedIndexChanged += CMB_CAT_TODEL_SelectedIndexChanged;
             // 
             // BTN_ADD_CAT
             // 
-            this.BTN_ADD_CAT.Location = new System.Drawing.Point(12, 426);
-            this.BTN_ADD_CAT.Name = "BTN_ADD_CAT";
-            this.BTN_ADD_CAT.Size = new System.Drawing.Size(181, 23);
-            this.BTN_ADD_CAT.TabIndex = 3;
-            this.BTN_ADD_CAT.Text = "Katalog Hinzufügen";
-            this.BTN_ADD_CAT.UseVisualStyleBackColor = true;
-            this.BTN_ADD_CAT.Click += new System.EventHandler(this.BTN_ADD_CAT_Click);
+            BTN_ADD_CAT.Location = new Point(12, 426);
+            BTN_ADD_CAT.Name = "BTN_ADD_CAT";
+            BTN_ADD_CAT.Size = new Size(181, 23);
+            BTN_ADD_CAT.TabIndex = 3;
+            BTN_ADD_CAT.Text = "Katalog Hinzufügen";
+            BTN_ADD_CAT.UseVisualStyleBackColor = true;
+            BTN_ADD_CAT.Click += BTN_ADD_CAT_Click;
             // 
             // BTN_DEL_TAB
             // 
-            this.BTN_DEL_TAB.Location = new System.Drawing.Point(581, 426);
-            this.BTN_DEL_TAB.Name = "BTN_DEL_TAB";
-            this.BTN_DEL_TAB.Size = new System.Drawing.Size(181, 23);
-            this.BTN_DEL_TAB.TabIndex = 4;
-            this.BTN_DEL_TAB.Text = "Katalog Löschen";
-            this.BTN_DEL_TAB.UseVisualStyleBackColor = true;
-            this.BTN_DEL_TAB.Click += new System.EventHandler(this.BTN_DEL_TAB_Click);
+            BTN_DEL_TAB.Location = new Point(581, 426);
+            BTN_DEL_TAB.Name = "BTN_DEL_TAB";
+            BTN_DEL_TAB.Size = new Size(181, 23);
+            BTN_DEL_TAB.TabIndex = 4;
+            BTN_DEL_TAB.Text = "Katalog Löschen";
+            BTN_DEL_TAB.UseVisualStyleBackColor = true;
+            BTN_DEL_TAB.Click += BTN_DEL_TAB_Click;
+            // 
+            // Column1
+            // 
+            Column1.HeaderText = "Frage";
+            Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            Column2.DataPropertyName = "Qtype";
+            Column2.HeaderText = "Fragetyp";
+            Column2.Name = "Column2";
+            Column2.Resizable = DataGridViewTriState.True;
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "RichtigeAntwort";
+            Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "Antwort_A";
+            Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            Column5.HeaderText = "Antwort_B";
+            Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            Column6.HeaderText = "Antwort_C";
+            Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            Column7.HeaderText = "Antwort_D";
+            Column7.Name = "Column7";
             // 
             // QuestEdit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Wi_e_so.Properties.Resources.Back;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(784, 461);
-            this.Controls.Add(this.BTN_DEL_TAB);
-            this.Controls.Add(this.BTN_ADD_CAT);
-            this.Controls.Add(this.CMB_CAT_TODEL);
-            this.Controls.Add(this.TB_TABLENAME);
-            this.Controls.Add(this.DG_NEW);
-            this.DoubleBuffered = true;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(800, 500);
-            this.MinimumSize = new System.Drawing.Size(800, 500);
-            this.Name = "QuestEdit";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "QuestEdit";
-            ((System.ComponentModel.ISupportInitialize)(this.DG_NEW)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.Back;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(784, 461);
+            Controls.Add(BTN_DEL_TAB);
+            Controls.Add(BTN_ADD_CAT);
+            Controls.Add(CMB_CAT_TODEL);
+            Controls.Add(TB_TABLENAME);
+            Controls.Add(DG_NEW);
+            DoubleBuffered = true;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximumSize = new Size(800, 500);
+            MinimumSize = new Size(800, 500);
+            Name = "QuestEdit";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "QuestEdit";
+            ((System.ComponentModel.ISupportInitialize)DG_NEW).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

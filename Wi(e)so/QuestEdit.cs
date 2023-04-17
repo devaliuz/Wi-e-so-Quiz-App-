@@ -32,13 +32,16 @@ namespace Wi_e_so
 
         private void BTN_ADD_CAT_Click(object sender, EventArgs e)
         {
-            if (TB_TABLENAME.Text.Length == 0) MessageBox.Show("Bitte einen Namen für die Tabelle angeben!");
+            if (TB_TABLENAME.Text.Length == 0)
+            {
+                MessageBox.Show("Bitte einen Namen für die Tabelle angeben!");
+            }
             else
             {
                 try
                 {
                     string table = TB_TABLENAME.Text.ToString();
-                    using (SQLiteConnection connection = new SQLiteConnection("Data Source = "+ database.getPath()))
+                    using (SQLiteConnection connection = new SQLiteConnection("Data Source = " + database.getPath()))
                     {
                         connection.Open();
                         using (SQLiteCommand command = new SQLiteCommand($"CREATE TABLE " + table + " " +
@@ -52,7 +55,9 @@ namespace Wi_e_so
                         {
                             command.ExecuteNonQuery();
                         }
+
                         int rows = DG_NEW.RowCount;
+
                         for (int i = 0; i < rows - 1; i++)
                         {
                             using (SQLiteCommand command1 = new SQLiteCommand("INSERT INTO " + table + "(Question, Questiontype, Correct, Answer_A, Answer_B, Answer_C, Answer_D)" +
@@ -88,17 +93,17 @@ namespace Wi_e_so
 
         private void BTN_DEL_TAB_Click(object sender, EventArgs e)
         {
-            string todel = "'"+CMB_CAT_TODEL.SelectedItem.ToString()+"'";
+            string todel = "'" + CMB_CAT_TODEL.SelectedItem.ToString() + "'";
             try
             {
-                using (SQLiteConnection connection = new SQLiteConnection("Data Source = "+ database.getPath()))
+                using (SQLiteConnection connection = new SQLiteConnection("Data Source = " + database.getPath()))
                 {
                     connection.Open();
-                    using (SQLiteCommand command = new SQLiteCommand("DROP TABLE "+todel+";", connection))
+                    using (SQLiteCommand command = new SQLiteCommand("DROP TABLE " + todel + ";", connection))
                     {
                         command.ExecuteNonQuery();
                     }
-                    using (SQLiteCommand command = new SQLiteCommand("DELETE FROM Overview WHERE Catalog ="+todel+";", connection))
+                    using (SQLiteCommand command = new SQLiteCommand("DELETE FROM Overview WHERE Catalog =" + todel + ";", connection))
                     {
                         command.ExecuteNonQuery();
                     }
@@ -107,7 +112,7 @@ namespace Wi_e_so
                 MessageBox.Show("Der Fragenkatalog " + todel + " wurde aus der Datenbank entfernt.");
                 BTN_DEL_TAB.Enabled = false;
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
