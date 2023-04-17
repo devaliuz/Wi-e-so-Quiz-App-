@@ -86,7 +86,7 @@ namespace Wi_e_so
             string todel = "'"+CMB_CAT_TODEL.SelectedItem.ToString()+"'";
             try
             {
-                using (SQLiteConnection connection = new SQLiteConnection("Data Source = Questions.sqlite3"))
+                using (SQLiteConnection connection = new SQLiteConnection("Data Source = C:\\Users\\Public\\Wieso\\Questions.sqlite3"))
                 {
                     connection.Open();
                     using (SQLiteCommand command = new SQLiteCommand("DROP TABLE "+todel+";", connection))
@@ -105,6 +105,11 @@ namespace Wi_e_so
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void CMB_CAT_TODEL_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

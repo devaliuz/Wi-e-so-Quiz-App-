@@ -28,201 +28,204 @@
         /// </summary>
         private void InitializeComponent()
         {
-            BTN_LOGIN = new Button();
-            BTN_SCORE = new Button();
-            CMB_CAT = new ComboBox();
-            BTN_EDITKAT = new Button();
-            LBL_QUESTION = new Label();
-            RDB_A = new RadioButton();
-            RDB_C = new RadioButton();
-            RDB_B = new RadioButton();
-            RDB_D = new RadioButton();
-            LBL_USER = new Label();
-            LBL_Progress = new Label();
-            BTN_NEXT = new Button();
-            NUM = new NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)NUM).BeginInit();
-            SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
+            this.BTN_LOGIN = new System.Windows.Forms.Button();
+            this.BTN_SCORE = new System.Windows.Forms.Button();
+            this.CMB_CAT = new System.Windows.Forms.ComboBox();
+            this.BTN_EDITKAT = new System.Windows.Forms.Button();
+            this.LBL_QUESTION = new System.Windows.Forms.Label();
+            this.RDB_A = new System.Windows.Forms.RadioButton();
+            this.RDB_C = new System.Windows.Forms.RadioButton();
+            this.RDB_B = new System.Windows.Forms.RadioButton();
+            this.RDB_D = new System.Windows.Forms.RadioButton();
+            this.LBL_USER = new System.Windows.Forms.Label();
+            this.LBL_Progress = new System.Windows.Forms.Label();
+            this.BTN_NEXT = new System.Windows.Forms.Button();
+            this.NUM = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.NUM)).BeginInit();
+            this.SuspendLayout();
             // 
             // BTN_LOGIN
             // 
-            BTN_LOGIN.Location = new Point(12, 12);
-            BTN_LOGIN.Name = "BTN_LOGIN";
-            BTN_LOGIN.Size = new Size(75, 23);
-            BTN_LOGIN.TabIndex = 0;
-            BTN_LOGIN.Text = "Anmelden";
-            BTN_LOGIN.UseVisualStyleBackColor = true;
-            BTN_LOGIN.Click += BTN_LOGIN_Click;
+            this.BTN_LOGIN.Location = new System.Drawing.Point(12, 12);
+            this.BTN_LOGIN.Name = "BTN_LOGIN";
+            this.BTN_LOGIN.Size = new System.Drawing.Size(75, 23);
+            this.BTN_LOGIN.TabIndex = 0;
+            this.BTN_LOGIN.Text = "Anmelden";
+            this.BTN_LOGIN.UseVisualStyleBackColor = true;
+            this.BTN_LOGIN.Click += new System.EventHandler(this.BTN_LOGIN_Click);
             // 
             // BTN_SCORE
             // 
-            BTN_SCORE.Location = new Point(12, 41);
-            BTN_SCORE.Name = "BTN_SCORE";
-            BTN_SCORE.Size = new Size(75, 23);
-            BTN_SCORE.TabIndex = 1;
-            BTN_SCORE.Text = "Ergebnisse";
-            BTN_SCORE.UseVisualStyleBackColor = true;
-            BTN_SCORE.Click += BTN_SCORE_Click;
+            this.BTN_SCORE.Location = new System.Drawing.Point(12, 41);
+            this.BTN_SCORE.Name = "BTN_SCORE";
+            this.BTN_SCORE.Size = new System.Drawing.Size(75, 23);
+            this.BTN_SCORE.TabIndex = 1;
+            this.BTN_SCORE.Text = "Ergebnisse";
+            this.BTN_SCORE.UseVisualStyleBackColor = true;
+            this.BTN_SCORE.Click += new System.EventHandler(this.BTN_SCORE_Click);
             // 
             // CMB_CAT
             // 
-            CMB_CAT.FormattingEnabled = true;
-            CMB_CAT.Location = new Point(778, 13);
-            CMB_CAT.Name = "CMB_CAT";
-            CMB_CAT.Size = new Size(194, 23);
-            CMB_CAT.TabIndex = 2;
-            CMB_CAT.SelectedIndexChanged += CMB_CAT_SelectedIndexChanged;
-            CMB_CAT.Click += CMB_CAT_Click;
+            this.CMB_CAT.FormattingEnabled = true;
+            this.CMB_CAT.Location = new System.Drawing.Point(778, 13);
+            this.CMB_CAT.Name = "CMB_CAT";
+            this.CMB_CAT.Size = new System.Drawing.Size(194, 23);
+            this.CMB_CAT.TabIndex = 2;
+            this.CMB_CAT.SelectedIndexChanged += new System.EventHandler(this.CMB_CAT_SelectedIndexChanged);
+            this.CMB_CAT.Click += new System.EventHandler(this.CMB_CAT_Click);
             // 
             // BTN_EDITKAT
             // 
-            BTN_EDITKAT.Location = new Point(778, 51);
-            BTN_EDITKAT.Name = "BTN_EDITKAT";
-            BTN_EDITKAT.Size = new Size(194, 23);
-            BTN_EDITKAT.TabIndex = 3;
-            BTN_EDITKAT.Text = "Kataloge bearbeiten";
-            BTN_EDITKAT.UseVisualStyleBackColor = true;
-            BTN_EDITKAT.Click += BTN_EDITKAT_Click;
+            this.BTN_EDITKAT.Location = new System.Drawing.Point(778, 51);
+            this.BTN_EDITKAT.Name = "BTN_EDITKAT";
+            this.BTN_EDITKAT.Size = new System.Drawing.Size(194, 23);
+            this.BTN_EDITKAT.TabIndex = 3;
+            this.BTN_EDITKAT.Text = "Kataloge bearbeiten";
+            this.BTN_EDITKAT.UseVisualStyleBackColor = true;
+            this.BTN_EDITKAT.Click += new System.EventHandler(this.BTN_EDITKAT_Click);
             // 
             // LBL_QUESTION
             // 
-            LBL_QUESTION.AutoSize = true;
-            LBL_QUESTION.BackColor = Color.Transparent;
-            LBL_QUESTION.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            LBL_QUESTION.Location = new Point(251, 51);
-            LBL_QUESTION.MaximumSize = new Size(500, 250);
-            LBL_QUESTION.MinimumSize = new Size(500, 250);
-            LBL_QUESTION.Name = "LBL_QUESTION";
-            LBL_QUESTION.Size = new Size(500, 250);
-            LBL_QUESTION.TabIndex = 4;
-            LBL_QUESTION.Text = "Hier könnte ihre Frage stehen";
-            LBL_QUESTION.TextAlign = ContentAlignment.MiddleCenter;
+            this.LBL_QUESTION.AutoSize = true;
+            this.LBL_QUESTION.BackColor = System.Drawing.Color.Transparent;
+            this.LBL_QUESTION.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.LBL_QUESTION.Location = new System.Drawing.Point(251, 51);
+            this.LBL_QUESTION.MaximumSize = new System.Drawing.Size(500, 250);
+            this.LBL_QUESTION.MinimumSize = new System.Drawing.Size(500, 250);
+            this.LBL_QUESTION.Name = "LBL_QUESTION";
+            this.LBL_QUESTION.Size = new System.Drawing.Size(500, 250);
+            this.LBL_QUESTION.TabIndex = 4;
+            this.LBL_QUESTION.Text = "Hier könnte ihre Frage stehen";
+            this.LBL_QUESTION.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // RDB_A
             // 
-            RDB_A.AutoSize = true;
-            RDB_A.BackColor = Color.Transparent;
-            RDB_A.Location = new Point(126, 310);
-            RDB_A.MaximumSize = new Size(200, 100);
-            RDB_A.MinimumSize = new Size(200, 100);
-            RDB_A.Name = "RDB_A";
-            RDB_A.Size = new Size(200, 100);
-            RDB_A.TabIndex = 5;
-            RDB_A.TabStop = true;
-            RDB_A.Text = "A";
-            RDB_A.UseVisualStyleBackColor = false;
+            this.RDB_A.AutoSize = true;
+            this.RDB_A.BackColor = System.Drawing.Color.Transparent;
+            this.RDB_A.Location = new System.Drawing.Point(126, 310);
+            this.RDB_A.MaximumSize = new System.Drawing.Size(200, 100);
+            this.RDB_A.MinimumSize = new System.Drawing.Size(200, 100);
+            this.RDB_A.Name = "RDB_A";
+            this.RDB_A.Size = new System.Drawing.Size(200, 100);
+            this.RDB_A.TabIndex = 5;
+            this.RDB_A.TabStop = true;
+            this.RDB_A.Text = "A";
+            this.RDB_A.UseVisualStyleBackColor = false;
             // 
             // RDB_C
             // 
-            RDB_C.AutoSize = true;
-            RDB_C.BackColor = Color.Transparent;
-            RDB_C.Location = new Point(126, 416);
-            RDB_C.MaximumSize = new Size(200, 100);
-            RDB_C.MinimumSize = new Size(200, 100);
-            RDB_C.Name = "RDB_C";
-            RDB_C.Size = new Size(200, 100);
-            RDB_C.TabIndex = 6;
-            RDB_C.TabStop = true;
-            RDB_C.Text = "C";
-            RDB_C.UseVisualStyleBackColor = false;
+            this.RDB_C.AutoSize = true;
+            this.RDB_C.BackColor = System.Drawing.Color.Transparent;
+            this.RDB_C.Location = new System.Drawing.Point(126, 416);
+            this.RDB_C.MaximumSize = new System.Drawing.Size(200, 100);
+            this.RDB_C.MinimumSize = new System.Drawing.Size(200, 100);
+            this.RDB_C.Name = "RDB_C";
+            this.RDB_C.Size = new System.Drawing.Size(200, 100);
+            this.RDB_C.TabIndex = 6;
+            this.RDB_C.TabStop = true;
+            this.RDB_C.Text = "C";
+            this.RDB_C.UseVisualStyleBackColor = false;
             // 
             // RDB_B
             // 
-            RDB_B.AutoSize = true;
-            RDB_B.BackColor = Color.Transparent;
-            RDB_B.Location = new Point(632, 310);
-            RDB_B.MaximumSize = new Size(200, 100);
-            RDB_B.MinimumSize = new Size(200, 100);
-            RDB_B.Name = "RDB_B";
-            RDB_B.Size = new Size(200, 100);
-            RDB_B.TabIndex = 7;
-            RDB_B.TabStop = true;
-            RDB_B.Text = "B";
-            RDB_B.UseVisualStyleBackColor = false;
+            this.RDB_B.AutoSize = true;
+            this.RDB_B.BackColor = System.Drawing.Color.Transparent;
+            this.RDB_B.Location = new System.Drawing.Point(632, 310);
+            this.RDB_B.MaximumSize = new System.Drawing.Size(200, 100);
+            this.RDB_B.MinimumSize = new System.Drawing.Size(200, 100);
+            this.RDB_B.Name = "RDB_B";
+            this.RDB_B.Size = new System.Drawing.Size(200, 100);
+            this.RDB_B.TabIndex = 7;
+            this.RDB_B.TabStop = true;
+            this.RDB_B.Text = "B";
+            this.RDB_B.UseVisualStyleBackColor = false;
             // 
             // RDB_D
             // 
-            RDB_D.AutoSize = true;
-            RDB_D.BackColor = Color.Transparent;
-            RDB_D.Location = new Point(632, 416);
-            RDB_D.MaximumSize = new Size(200, 100);
-            RDB_D.MinimumSize = new Size(200, 100);
-            RDB_D.Name = "RDB_D";
-            RDB_D.Size = new Size(200, 100);
-            RDB_D.TabIndex = 8;
-            RDB_D.TabStop = true;
-            RDB_D.Text = "D";
-            RDB_D.UseVisualStyleBackColor = false;
+            this.RDB_D.AutoSize = true;
+            this.RDB_D.BackColor = System.Drawing.Color.Transparent;
+            this.RDB_D.Location = new System.Drawing.Point(632, 416);
+            this.RDB_D.MaximumSize = new System.Drawing.Size(200, 100);
+            this.RDB_D.MinimumSize = new System.Drawing.Size(200, 100);
+            this.RDB_D.Name = "RDB_D";
+            this.RDB_D.Size = new System.Drawing.Size(200, 100);
+            this.RDB_D.TabIndex = 8;
+            this.RDB_D.TabStop = true;
+            this.RDB_D.Text = "D";
+            this.RDB_D.UseVisualStyleBackColor = false;
             // 
             // LBL_USER
             // 
-            LBL_USER.AutoSize = true;
-            LBL_USER.BackColor = Color.Transparent;
-            LBL_USER.Location = new Point(93, 16);
-            LBL_USER.Name = "LBL_USER";
-            LBL_USER.Size = new Size(30, 15);
-            LBL_USER.TabIndex = 9;
-            LBL_USER.Text = "User";
+            this.LBL_USER.AutoSize = true;
+            this.LBL_USER.BackColor = System.Drawing.Color.Transparent;
+            this.LBL_USER.Location = new System.Drawing.Point(93, 16);
+            this.LBL_USER.Name = "LBL_USER";
+            this.LBL_USER.Size = new System.Drawing.Size(30, 15);
+            this.LBL_USER.TabIndex = 9;
+            this.LBL_USER.Text = "User";
             // 
             // LBL_Progress
             // 
-            LBL_Progress.AutoSize = true;
-            LBL_Progress.BackColor = Color.Transparent;
-            LBL_Progress.Location = new Point(778, 104);
-            LBL_Progress.Name = "LBL_Progress";
-            LBL_Progress.Size = new Size(30, 15);
-            LBL_Progress.TabIndex = 10;
-            LBL_Progress.Text = "x / y";
+            this.LBL_Progress.AutoSize = true;
+            this.LBL_Progress.BackColor = System.Drawing.Color.Transparent;
+            this.LBL_Progress.Location = new System.Drawing.Point(778, 104);
+            this.LBL_Progress.Name = "LBL_Progress";
+            this.LBL_Progress.Size = new System.Drawing.Size(30, 15);
+            this.LBL_Progress.TabIndex = 10;
+            this.LBL_Progress.Text = "x / y";
             // 
             // BTN_NEXT
             // 
-            BTN_NEXT.BackColor = Color.LightGreen;
-            BTN_NEXT.Location = new Point(863, 493);
-            BTN_NEXT.Name = "BTN_NEXT";
-            BTN_NEXT.Size = new Size(109, 45);
-            BTN_NEXT.TabIndex = 11;
-            BTN_NEXT.Text = "Weiter";
-            BTN_NEXT.UseVisualStyleBackColor = false;
-            BTN_NEXT.Click += BTN_NEXT_Click;
+            this.BTN_NEXT.BackColor = System.Drawing.Color.LightGreen;
+            this.BTN_NEXT.Location = new System.Drawing.Point(863, 493);
+            this.BTN_NEXT.Name = "BTN_NEXT";
+            this.BTN_NEXT.Size = new System.Drawing.Size(109, 45);
+            this.BTN_NEXT.TabIndex = 11;
+            this.BTN_NEXT.Text = "Weiter";
+            this.BTN_NEXT.UseVisualStyleBackColor = false;
+            this.BTN_NEXT.Click += new System.EventHandler(this.BTN_NEXT_Click);
             // 
             // NUM
             // 
-            NUM.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            NUM.Location = new Point(460, 339);
-            NUM.Name = "NUM";
-            NUM.Size = new Size(88, 35);
-            NUM.TabIndex = 12;
-            NUM.Visible = false;
+            this.NUM.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.NUM.Location = new System.Drawing.Point(460, 339);
+            this.NUM.Name = "NUM";
+            this.NUM.Size = new System.Drawing.Size(88, 35);
+            this.NUM.TabIndex = 12;
+            this.NUM.Visible = false;
             // 
             // MainWindow
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.Back;
-            BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(984, 561);
-            Controls.Add(NUM);
-            Controls.Add(BTN_NEXT);
-            Controls.Add(LBL_Progress);
-            Controls.Add(LBL_USER);
-            Controls.Add(RDB_D);
-            Controls.Add(RDB_B);
-            Controls.Add(RDB_C);
-            Controls.Add(RDB_A);
-            Controls.Add(LBL_QUESTION);
-            Controls.Add(BTN_EDITKAT);
-            Controls.Add(CMB_CAT);
-            Controls.Add(BTN_SCORE);
-            Controls.Add(BTN_LOGIN);
-            DoubleBuffered = true;
-            MaximumSize = new Size(1000, 600);
-            MinimumSize = new Size(1000, 600);
-            Name = "MainWindow";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Wi(e)so";
-            ((System.ComponentModel.ISupportInitialize)NUM).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Wi_e_so.Properties.Resources.Back;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.NUM);
+            this.Controls.Add(this.BTN_NEXT);
+            this.Controls.Add(this.LBL_Progress);
+            this.Controls.Add(this.LBL_USER);
+            this.Controls.Add(this.RDB_D);
+            this.Controls.Add(this.RDB_B);
+            this.Controls.Add(this.RDB_C);
+            this.Controls.Add(this.RDB_A);
+            this.Controls.Add(this.LBL_QUESTION);
+            this.Controls.Add(this.BTN_EDITKAT);
+            this.Controls.Add(this.CMB_CAT);
+            this.Controls.Add(this.BTN_SCORE);
+            this.Controls.Add(this.BTN_LOGIN);
+            this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(1000, 600);
+            this.MinimumSize = new System.Drawing.Size(1000, 600);
+            this.Name = "MainWindow";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Wi(e)so";
+            ((System.ComponentModel.ISupportInitialize)(this.NUM)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

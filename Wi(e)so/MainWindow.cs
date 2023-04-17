@@ -144,7 +144,7 @@ namespace Wi_e_so
 
             try
             {
-                using (SQLiteConnection c = new SQLiteConnection("Data Source = Questions.sqlite3"))
+                using (SQLiteConnection c = new SQLiteConnection("Data Source = C:\\Users\\Public\\Wieso\\Questions.sqlite3"))
                 {
                     c.Open();
                     string query = "SELECT * FROM " + cat + " WHERE _rowid_ = " + question;
@@ -201,9 +201,9 @@ namespace Wi_e_so
                     }
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("Unerwarteter Fehler aufgetreten!");                                     //if anything goes wrong with this process....
+                MessageBox.Show("Unerwarteter Fehler aufgetreten! \n"+ex.Message);                                     //if anything goes wrong with this process....
             }
         }
 
@@ -252,7 +252,7 @@ namespace Wi_e_so
                 RDB_D.Visible = false;
                 LBL_Progress.Text = "Du hast " + score + " von " + frageMax + " Punkte erreicht!";
 
-                using (SQLiteConnection c = new SQLiteConnection("Data Source = Questions.sqlite3"))
+                using (SQLiteConnection c = new SQLiteConnection("Data Source = C:\\Users\\Public\\Wieso\\Questions.sqlite3"))
                 {
                     c.Open();
                     string query = "INSERT INTO Score('Name', 'Score', 'Catalog','Date') VALUES(@Name,@Score,@Catalog, @Date)";

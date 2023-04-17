@@ -28,96 +28,103 @@
         /// </summary>
         private void InitializeComponent()
         {
-            SCORELIST = new ListView();
-            columnHeader1 = new ColumnHeader();
-            columnHeader2 = new ColumnHeader();
-            columnHeader3 = new ColumnHeader();
-            columnHeader4 = new ColumnHeader();
-            button1 = new Button();
-            BTN_CLOSE_SCOREBOARD = new Button();
-            BTN_DEL = new Button();
-            SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Scoreboard));
+            this.SCORELIST = new System.Windows.Forms.ListView();
+            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
+            this.button1 = new System.Windows.Forms.Button();
+            this.BTN_CLOSE_SCOREBOARD = new System.Windows.Forms.Button();
+            this.BTN_DEL = new System.Windows.Forms.Button();
+            this.SuspendLayout();
             // 
             // SCORELIST
             // 
-            SCORELIST.BackColor = SystemColors.Info;
-            SCORELIST.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4 });
-            SCORELIST.Location = new Point(12, 12);
-            SCORELIST.Name = "SCORELIST";
-            SCORELIST.Size = new Size(550, 300);
-            SCORELIST.TabIndex = 0;
-            SCORELIST.UseCompatibleStateImageBehavior = false;
+            this.SCORELIST.BackColor = System.Drawing.SystemColors.Info;
+            this.SCORELIST.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4});
+            this.SCORELIST.Location = new System.Drawing.Point(12, 12);
+            this.SCORELIST.Name = "SCORELIST";
+            this.SCORELIST.Size = new System.Drawing.Size(550, 300);
+            this.SCORELIST.TabIndex = 0;
+            this.SCORELIST.UseCompatibleStateImageBehavior = false;
             // 
             // columnHeader1
             // 
-            columnHeader1.Text = "Name";
-            columnHeader1.Width = 120;
+            this.columnHeader1.Text = "Name";
+            this.columnHeader1.Width = 120;
             // 
             // columnHeader2
             // 
-            columnHeader2.Text = "Katalog";
-            columnHeader2.TextAlign = HorizontalAlignment.Center;
-            columnHeader2.Width = 120;
+            this.columnHeader2.Text = "Katalog";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2.Width = 120;
             // 
             // columnHeader3
             // 
-            columnHeader3.Text = "Datum";
-            columnHeader3.TextAlign = HorizontalAlignment.Center;
-            columnHeader3.Width = 120;
+            this.columnHeader3.Text = "Datum";
+            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader3.Width = 120;
             // 
             // columnHeader4
             // 
-            columnHeader4.Text = "Punkte";
-            columnHeader4.TextAlign = HorizontalAlignment.Center;
-            columnHeader4.Width = 120;
+            this.columnHeader4.Text = "Punkte";
+            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader4.Width = 120;
             // 
             // button1
             // 
-            button1.Location = new Point(670, 370);
-            button1.Name = "button1";
-            button1.Size = new Size(118, 43);
-            button1.TabIndex = 1;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            this.button1.Location = new System.Drawing.Point(670, 370);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(118, 43);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // BTN_CLOSE_SCOREBOARD
             // 
-            BTN_CLOSE_SCOREBOARD.Location = new Point(461, 318);
-            BTN_CLOSE_SCOREBOARD.Name = "BTN_CLOSE_SCOREBOARD";
-            BTN_CLOSE_SCOREBOARD.Size = new Size(101, 31);
-            BTN_CLOSE_SCOREBOARD.TabIndex = 2;
-            BTN_CLOSE_SCOREBOARD.Text = "Schließen";
-            BTN_CLOSE_SCOREBOARD.UseVisualStyleBackColor = true;
-            BTN_CLOSE_SCOREBOARD.Click += BTN_CLOSE_SCOREBOARD_Click;
+            this.BTN_CLOSE_SCOREBOARD.Location = new System.Drawing.Point(461, 318);
+            this.BTN_CLOSE_SCOREBOARD.Name = "BTN_CLOSE_SCOREBOARD";
+            this.BTN_CLOSE_SCOREBOARD.Size = new System.Drawing.Size(101, 31);
+            this.BTN_CLOSE_SCOREBOARD.TabIndex = 2;
+            this.BTN_CLOSE_SCOREBOARD.Text = "Schließen";
+            this.BTN_CLOSE_SCOREBOARD.UseVisualStyleBackColor = true;
+            this.BTN_CLOSE_SCOREBOARD.Click += new System.EventHandler(this.BTN_CLOSE_SCOREBOARD_Click);
             // 
             // BTN_DEL
             // 
-            BTN_DEL.Location = new Point(12, 318);
-            BTN_DEL.Name = "BTN_DEL";
-            BTN_DEL.Size = new Size(108, 31);
-            BTN_DEL.TabIndex = 3;
-            BTN_DEL.Text = "Einträge Löschen";
-            BTN_DEL.UseVisualStyleBackColor = true;
-            BTN_DEL.Click += BTN_DEL_Click;
+            this.BTN_DEL.Location = new System.Drawing.Point(12, 318);
+            this.BTN_DEL.Name = "BTN_DEL";
+            this.BTN_DEL.Size = new System.Drawing.Size(108, 31);
+            this.BTN_DEL.TabIndex = 3;
+            this.BTN_DEL.Text = "Einträge Löschen";
+            this.BTN_DEL.UseVisualStyleBackColor = true;
+            this.BTN_DEL.Click += new System.EventHandler(this.BTN_DEL_Click);
             // 
             // Scoreboard
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.Back;
-            BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(584, 361);
-            Controls.Add(BTN_DEL);
-            Controls.Add(BTN_CLOSE_SCOREBOARD);
-            Controls.Add(button1);
-            Controls.Add(SCORELIST);
-            DoubleBuffered = true;
-            MaximumSize = new Size(600, 400);
-            MinimumSize = new Size(600, 400);
-            Name = "Scoreboard";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Scoreboard";
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Wi_e_so.Properties.Resources.Back;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(584, 361);
+            this.Controls.Add(this.BTN_DEL);
+            this.Controls.Add(this.BTN_CLOSE_SCOREBOARD);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.SCORELIST);
+            this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(600, 400);
+            this.MinimumSize = new System.Drawing.Size(600, 400);
+            this.Name = "Scoreboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Scoreboard";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
