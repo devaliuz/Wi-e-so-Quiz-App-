@@ -8,6 +8,7 @@ namespace Wi_e_so
         {
             InitializeComponent();
             LoadDropdown();
+            BTN_DEL_TAB.Enabled = false;
         }
         DataBase database = new DataBase();
 
@@ -31,16 +32,13 @@ namespace Wi_e_so
 
         private void BTN_ADD_CAT_Click(object sender, EventArgs e)
         {
-            if (TB_TABLENAME.Text.Length == 0)
-            {
-                MessageBox.Show("Bitte einen Namen für die Tabelle angeben!");
-            }
+            if (TB_TABLENAME.Text.Length == 0) MessageBox.Show("Bitte einen Namen für die Tabelle angeben!");
             else
             {
                 try
                 {
                     string table = TB_TABLENAME.Text.ToString();
-                    using (SQLiteConnection connection = new SQLiteConnection("Data Source = C:\\Users\\Public\\Wieso\\Questions.sqlite3"))
+                    using (SQLiteConnection connection = new SQLiteConnection("Data Source = "+ database.getPath()))
                     {
                         connection.Open();
                         using (SQLiteCommand command = new SQLiteCommand($"CREATE TABLE " + table + " " +
@@ -93,7 +91,7 @@ namespace Wi_e_so
             string todel = "'"+CMB_CAT_TODEL.SelectedItem.ToString()+"'";
             try
             {
-                using (SQLiteConnection connection = new SQLiteConnection("Data Source = C:\\Users\\Public\\Wieso\\Questions.sqlite3"))
+                using (SQLiteConnection connection = new SQLiteConnection("Data Source = "+ database.getPath()))
                 {
                     connection.Open();
                     using (SQLiteCommand command = new SQLiteCommand("DROP TABLE "+todel+";", connection))
@@ -107,6 +105,7 @@ namespace Wi_e_so
                 }
                 LoadDropdown();
                 MessageBox.Show("Der Fragenkatalog " + todel + " wurde aus der Datenbank entfernt.");
+                BTN_DEL_TAB.Enabled = false;
             }
             catch (Exception ex) 
             {
@@ -116,7 +115,7 @@ namespace Wi_e_so
 
         private void CMB_CAT_TODEL_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            BTN_DEL_TAB.Enabled = true;
         }
     }
 }

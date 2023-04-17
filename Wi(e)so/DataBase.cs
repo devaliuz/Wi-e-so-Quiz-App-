@@ -4,14 +4,15 @@ namespace Wi_e_so
 {
     class DataBase
     {
+        const string PATH = "C:\\Users\\Public\\Wieso\\Questions.sqlite3";
         public DataBase()
         {
-            if (!File.Exists("C:\\Users\\Public\\Wieso\\Questions.sqlite3"))
+            if (!File.Exists(PATH))
             {
-                SQLiteConnection.CreateFile("C:\\Users\\Public\\Wieso\\Questions.sqlite3");
+                SQLiteConnection.CreateFile(PATH);
                 try
                 {
-                    using (SQLiteConnection connection = new SQLiteConnection("Data Source = C:\\Users\\Public\\Wieso\\Questions.sqlite3"))
+                    using (SQLiteConnection connection = new SQLiteConnection("Data Source ="+ PATH))
                     {
                         connection.Open();
                         using (SQLiteCommand command = new SQLiteCommand("CREATE TABLE Overview('Catalog' TEXT NOT NULL)", connection))
@@ -28,8 +29,12 @@ namespace Wi_e_so
                 {
                     MessageBox.Show(ex.Message);
                 }
-            }
-                
+            }  
+        }
+
+        public string getPath() 
+        {
+            return PATH;
         }
 
         public int count(string table)
@@ -37,7 +42,7 @@ namespace Wi_e_so
             int entries = 0;
             try
             {
-                using (SQLiteConnection connection = new SQLiteConnection("Data Source = C:\\Users\\Public\\Wieso\\Questions.sqlite3"))
+                using (SQLiteConnection connection = new SQLiteConnection("Data Source = "+PATH))
                 {
                     connection.Open();
                     using (SQLiteCommand command = new SQLiteCommand("SELECT * FROM "+table, connection))
@@ -70,7 +75,7 @@ namespace Wi_e_so
             {
                 int index = 0;
 
-                using (SQLiteConnection connection = new SQLiteConnection("Data Source = C:\\Users\\Public\\Wieso\\Questions.sqlite3"))
+                using (SQLiteConnection connection = new SQLiteConnection("Data Source = "+PATH))
                 {
                     connection.Open();
                     using (SQLiteCommand command = new SQLiteCommand($"SELECT * FROM "+table , connection))

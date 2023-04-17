@@ -9,6 +9,7 @@ namespace Wi_e_so
             InitializeComponent();
             LoadList();
         }
+        DataBase database = new DataBase();
         private void LoadList()
         {
             SCORELIST.View = View.Details;
@@ -16,7 +17,7 @@ namespace Wi_e_so
             {
                 int index = 0;
 
-                using (SQLiteConnection connection = new SQLiteConnection("Data Source = C:\\Users\\Public\\Wieso\\Questions.sqlite3"))
+                using (SQLiteConnection connection = new SQLiteConnection("Data Source = "+ database.getPath()))
                 {
                     connection.Open();
                     using (SQLiteCommand command = new SQLiteCommand($"SELECT * FROM Score", connection))
@@ -47,19 +48,27 @@ namespace Wi_e_so
 
         private void BTN_DEL_Click(object sender, EventArgs e)
         {
-            using (SQLiteConnection connection = new SQLiteConnection("Data Source = C:\\Users\\Public\\Wieso\\Questions.sqlite3"))
+            try
             {
-                connection.Open();
-                using (SQLiteCommand command = new SQLiteCommand($"DROP TABLE Score", connection))
+                using (SQLiteConnection connection = new SQLiteConnection("Data Source = " + database.getPath()))
                 {
-                    command.ExecuteNonQuery();
+                    connection.Open();
+                    using (SQLiteCommand command = new SQLiteCommand($"DROP TABLE Score", connection))
+                    {
+                        command.ExecuteNonQuery();
+                    }
+                    using (SQLiteCommand command = new SQLiteCommand($"CREATE TABLE Score('Name' TEXT NOT NULL,'Catalog' TEXT NOT NULL, 'Score' INTEGER NOT NULL, 'Date' TEXT NOT NULL)", connection))
+                    {
+                        command.ExecuteNonQuery();
+                    }
                 }
-                using (SQLiteCommand command = new SQLiteCommand($"CREATE TABLE Score('Name' TEXT NOT NULL,'Catalog' TEXT NOT NULL, 'Score' INTEGER NOT NULL, 'Date' TEXT NOT NULL)", connection))
-                {
-                    command.ExecuteNonQuery();
-                }
+                MessageBox.Show("Alle Ergebnisse wurden gelöscht!");
+                Close();
             }
-            Close();
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

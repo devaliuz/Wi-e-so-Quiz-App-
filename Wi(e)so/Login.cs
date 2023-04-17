@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace Wi_e_so
+﻿namespace Wi_e_so
 {
     public partial class Login : Form
     {
@@ -27,10 +17,7 @@ namespace Wi_e_so
 
         private void TB_USER_KeyUp(object sender, KeyEventArgs e)
         {
-            if (TB_USER.Text.ToString() == "Bötzer")
-            {
-                TB_PW.Visible = true;
-            }
+            if (TB_USER.Text.ToString() == "Bötzer") TB_PW.Visible = true;
             else { TB_PW.Visible = false; }
         }
 
@@ -66,8 +53,7 @@ namespace Wi_e_so
 
         private bool CheckPw(string pw)
         {
-
-            return true;
+            if(pw =="password")return true;
 
             return false;
         }

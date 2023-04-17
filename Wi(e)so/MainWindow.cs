@@ -144,7 +144,7 @@ namespace Wi_e_so
 
             try
             {
-                using (SQLiteConnection c = new SQLiteConnection("Data Source = C:\\Users\\Public\\Wieso\\Questions.sqlite3"))
+                using (SQLiteConnection c = new SQLiteConnection("Data Source = "+ database.getPath()))
                 {
                     c.Open();
                     string query = "SELECT * FROM " + cat + " WHERE _rowid_ = " + question;
@@ -168,11 +168,11 @@ namespace Wi_e_so
                                 RDB_D.Visible = true;
                                 NUM.Visible = false;
                                 //TB_Answer.Visible = false;
-                                RDB_A.Text = rowreader["Answer_A"].ToString();                                     //Displays a possible answer
-                                RDB_B.Text = rowreader["Answer_B"].ToString();                                     //**
-                                RDB_C.Text = rowreader["Answer_C"].ToString();                                     //**
-                                RDB_D.Text = rowreader["Answer_D"].ToString();                                     //**
-                                correct = rowreader["Correct"].ToString();                            //saves right answer into a variable
+                                RDB_A.Text = rowreader["Answer_A"].ToString();                                     
+                                RDB_B.Text = rowreader["Answer_B"].ToString();                                     
+                                RDB_C.Text = rowreader["Answer_C"].ToString();                                     
+                                RDB_D.Text = rowreader["Answer_D"].ToString();                                     
+                                correct = rowreader["Correct"].ToString();                            
                             }
                             else if (questionType == "Num")
                             {
@@ -182,7 +182,7 @@ namespace Wi_e_so
                                 RDB_D.Visible = false;
                                 NUM.Visible = true;
                                 //TB_Answer.Visible = false;
-                                correct = rowreader["Correct"].ToString();                            //saves right answer into a variable
+                                correct = rowreader["Correct"].ToString();                            
 
                             }/*
                             else if (QuestionType == "Text")
@@ -193,10 +193,10 @@ namespace Wi_e_so
                                 Antwort_D.Visible = false;
                                 MATH_NUM.Visible = false;
                                 TB_Answer.Visible = true;
-                                Richtige_Antwort = rowreader["Richtige_Antwort"].ToString();                            //saves right answer into a variable
+                                Richtige_Antwort = rowreader["Richtige_Antwort"].ToString();                            
                             }
-                            string picpath = rowreader["Bild"].ToString();                                              //gets picturname from DB
-                            BildBox.Image = Image.FromFile(@"Pics\" + picpath); */                                        //picture NEEDS to be in "Pics" folder atm
+                            string picpath = rowreader["Bild"].ToString();                                              
+                            BildBox.Image = Image.FromFile(@"Pics\" + picpath); */                                        
  
                         }
                     }
@@ -210,39 +210,15 @@ namespace Wi_e_so
 
         private void BTN_NEXT_Click(object sender, EventArgs e)
         {
-            if (RDB_A.Checked == true)
-            {
-                if (RDB_A.Text == correct)
-                {
-                    score++;
-                }
-            }
-            if (RDB_B.Checked == true)
-            {
-                if (RDB_B.Text == correct)
-                {
-                    score++;
-                }
-            }
-            if (RDB_C.Checked == true)
-            {
-                if (RDB_C.Text == correct)
-                {
-                    score++;
-                }
-            }
-            if (RDB_D.Checked == true)
-            {
-                if (RDB_D.Text == correct)
-                {
-                    score++;
-                }
-            }
+            if (RDB_A.Checked == true) if (RDB_A.Text == correct) score++;
 
-            if (NUM.Value.ToString() == correct)
-            {
-                score++;
-            }
+            if (RDB_B.Checked == true) if (RDB_B.Text == correct) score++;
+
+            if (RDB_C.Checked == true) if (RDB_C.Text == correct) score++;
+
+            if (RDB_D.Checked == true) if (RDB_D.Text == correct) score++;
+
+            if (NUM.Value.ToString() == correct) score++;
 
             if (question == frageMax)
             {
@@ -253,7 +229,7 @@ namespace Wi_e_so
                 RDB_D.Visible = false;
                 LBL_Progress.Text = "Du hast " + score + " von " + frageMax + " Punkte erreicht!";
 
-                using (SQLiteConnection c = new SQLiteConnection("Data Source = C:\\Users\\Public\\Wieso\\Questions.sqlite3"))
+                using (SQLiteConnection c = new SQLiteConnection("Data Source = "+ database.getPath()))
                 {
                     c.Open();
                     string query = "INSERT INTO Score('Name', 'Score', 'Catalog','Date') VALUES(@Name,@Score,@Catalog, @Date)";
