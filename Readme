@@ -1,0 +1,72 @@
+ENGLISH
+
+For general use
+1.Click on "Anmelden" at the top left
+2.Admin access (extended functions):
+Username: Bötzer
+Password:password
+Alternatively, enter a different user name without a password.
+3. Select the questionnaire at the top right and answer the questions. (by clicking continue)
+4. To cancel, simply click on "Abmelden" at the top left.
+
+Use the admin features. (Registration as "Bötzer" necessary)
+•	Results
+• All runs since the last deletion of the data are displayed here
+• "Einträge löschen" deletes all displayed results
+
+• Edit Catalog
+• Enter content as specified in the DataGrid
+• DataGrid automatically expands by one row if necessary
+• NOTE: "Question", "Question Type", "Correct Answer" MUST NOT be left blank
+• NOTE: "Question type" please use MC ->Multiple Choice or Num (Numeric).
+• Give the questionnaire a unique name (naming without spaces)
+
+• Delete catalog
+• deletes the question catalog selected in the dropdown
+
+Closing remark:
+Features to add:
+• Free choice of memory location for the database by the user
+• Detailed output of incorrectly and correctly answered questions
+• delete/edit individual questions in existing catalogues
+• Regex and null checking in DataGrid
+• Regex in naming for new catalogs
+• further question types (image boxes, text box)
+
+
+
+DEUTSCH
+
+Zur Benutzung Allgemein
+
+1.Oben Links auf "Anmelden" klicken
+2.Adminzugang(erweiterte Funktionen):
+	Benutzername:Bötzer
+	Passwort:password
+Alternativ anderen Benutzernamen ohne Password eingeben.
+3. Oben rechts Fragekatalog auswählen und Fragen beantworten. (durch klicken auf weiter)
+4. Zum Abbruch einfach oben Links auf "abmelden" klicken.
+
+Die Admin-Features nutzen. (Anmeldung als "Bötzer" notwendig)
+•	Ergebnisse
+•	Hier werden alle Durchläufe seit letzter Löschung der Daten angezeigt
+•	"Einträge Löschen" löscht sämtliche angezeigten Ergebnisse
+
+•	Katalog bearbeiten
+•	Inhalte wie im DataGrid vorgegeben eintragen
+•	DataGrid erweitert sich automatisch um eine Reihe wenn nötig
+•	HINWEIS:"Frage", "Fragetyp", "RichtigeAntwort" DÜRFEN nicht leer bleiben
+•	HINWEIS: "Fragetyp" bitte MC ->Multiple Choice oder Num (Numeric) nutzen.
+•	Fragenkatalog mit eindeutigem Namen versehen (Benennung ohne Leerzeichen)
+
+•	Katalog löschen
+•	löscht den im Dropdown ausgewählten Fragekatalog
+
+Abschlussbemerkung:
+Feature to Add: 
+•	Freie Speicherplatzwahl der Datenbank durch Anwender
+•	Detailierte Ausgabe falsch und richtig beantworteter Fragen
+•	löschen/editieren einzelner Fragen in Vorhandenen Katalogen
+•	Regex und Nullprüfung im DataGrid
+•	Regex in Namensgebung für neue Kataloge
+•	weitere Fragetypen (Bilderboxen, Textbox)
