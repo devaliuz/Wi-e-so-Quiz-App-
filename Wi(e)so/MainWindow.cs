@@ -197,13 +197,14 @@ namespace Wi_e_so
                             }
                             string picpath = rowreader["Bild"].ToString();                                              //gets picturname from DB
                             BildBox.Image = Image.FromFile(@"Pics\" + picpath); */                                        //picture NEEDS to be in "Pics" folder atm
+ 
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Unerwarteter Fehler aufgetreten! \n"+ex.Message);                                     //if anything goes wrong with this process....
+                MessageBox.Show("Unerwarteter Fehler aufgetreten! \n"+ex.Message);                                    
             }
         }
 
